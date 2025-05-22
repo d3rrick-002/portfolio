@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Personal Portfolio</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="header-content">
+          <!-- Logo -->
+          <div class="logo">
+            <div class="logo-text">.d3rrick-002</div>
+          </div>
+
+          <!-- Hamburger Menu Button -->
+          <button class="hamburger" aria-label="Menu" id="hamburger-btn">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+
+          <!-- Navigation + Side Panel (grouped for toggling on mobile) -->
+          <div class="nav-wrapper" id="nav-wrapper">
+            <nav class="nav-links">
+              <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contacts</a></li>
+              </ul>
+            </nav>
+
+            <div class="nav-side-panel">
+              <div class="cv">
+                <button class="btn">Download CV</button>
+              </div>
+
+              <div id="openModal" class="profile">
+                <img src="images/boy.png" alt="Profile Picture" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close"><i class="bx bx-x"></i></span>
+          <h2><i class="bx bx-user"></i> Profile</h2>
+
+          <div class="contact-info">
+            <p><i class="bx bx-user-pin"></i> Derrick Nyenati</p>
+            <p><i class="bx bx-phone"></i> +231 888 871 915</p>
+            <p><i class="bx bx-envelope"></i> djptech231@gmail.com</p>
+          </div>
+
+          <div class="bio">
+            <p>
+              <i class="bx bx-book-open"></i> I am a Liberian, a sophomore
+              student at Starz University. I am studying Database
+              Administration.
+            </p>
+          </div>
+
+          <div style="margin-top: 20px; display: flex; gap: 15px">
+            <button
+              style="
+                background: #4a6fa5;
+                color: white;
+                border: none;
+                padding: 8px 16px;
+                border-radius: 6px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+              "
+            >
+              <i class="bx bxl-linkedin"></i> LinkedIn
+            </button>
+            <button
+              style="
+                background: #333;
+                color: white;
+                border: none;
+                padding: 8px 16px;
+                border-radius: 6px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+              "
+            >
+              <i class="bx bxl-github"></i> GitHub
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!--Hero section-->
+
+      <div id="hero" class="hero">
+        <div class="hero-contents">
+          <div class="greetings">
+            <h3>Hello, I'm</h3>
+            <h2>Derrick Nyenati</h2>
+            <h4>Full Stack Developer</h4>
+
+            <div class="info">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Eveniet, quas animi perferendis sed quod fugiat ipsam! Quo
+                laudantium doloribus quibusdam et, ab voluptatibus, explicabo
+                odit optio nesciunt earum, ipsa minima.
+              </p>
+            </div>
+
+            <div class="cta">
+              <button class="get-started">Get Started</button>
+              <button class="hire-me">Hire Me</button>
+            </div>
+
+            <div class="social-links">
+              <div class="social">
+                <a href="#" aria-label="GitHub"
+                  ><i class="bx bxl-github"></i
+                ></a>
+                <a href="#" aria-label="LinkedIn"
+                  ><i class="bx bxl-linkedin-square"></i
+                ></a>
+                <a href="#" aria-label="Twitter"
+                  ><i class="bx bxl-twitter"></i
+                ></a>
+                <a href="#" aria-label="Instagram"
+                  ><i class="bx bxl-instagram-alt"></i
+                ></a>
+                <a href="#" aria-label="Facebook"
+                  ><i class="bx bxl-facebook-square"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="side-container">
+            <img src="images/boy.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Services Section-->
+    <div id="services" class="services">
+      <div class="service-content">
+        <h3>Services</h3>
+        <h1>Expertise Service! Let's Check it out</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
+          explicabo maiores tenetur ex esse, totam, quibusdam porro quod ipsa
+          incidunt iure quae. Amet, magni temporibus odio iste natus aliquam,
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="card">
+          <div class="card-icon">
+            <i class="bx bx-terminal"></i>
+          </div>
+          <h3 class="card-title">Backend Developer</h3>
+
+          <p class="card-info">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut
+            distinctio fugiat sed ad dolorem animi ea libero accusamus minima
+            sunt. distinctio fugiat sed ad dolorem animi ea libero accusamus
+            minima sunt.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <i class="bx bx-cctv"></i>
+          </div>
+          <h3 class="card-title">CCTV Installation</h3>
+
+          <p class="card-info">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut
+            distinctio fugiat sed ad dolorem animi ea libero accusamus minima
+            sunt. distinctio fugiat sed ad dolorem animi ea libero accusamus
+            minima sunt.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <i class="bx bx-sidebar"></i>
+          </div>
+          <h3 class="card-title">Web Developer</h3>
+
+          <p class="card-info">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut
+            distinctio fugiat sed ad dolorem animi ea libero accusamus minima
+            sunt. distinctio fugiat sed ad dolorem animi ea libero accusamus
+            minima sunt.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!--about me section-->
+    <div id="about" class="about-me">
+      <div class="about-content">
+        <div class="about-img">
+          <div class="info">
+            <div class="line"></div>
+            <span>Derrick Nyenati</span>
+          </div>
+          <div class="overlay">
+            <h4>- Innovation - & - Production -</h4>
+          </div>
+          <img src="images/boy.png" alt="" />
+        </div>
+
+        <div class="about-text">
+          <h3>
+            Providing cutting-edge solutions to your technological needs is my
+            prority
+          </h3>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor sit
+            ratione doloremque fuga praesentium, sint exercitationem itaque
+            corrupti error accusantium eaque laborum suscipit ipsum expedita
+            voluptatum iste vero cupiditate sed. corrupti error accusantium
+            eaque laborum suscipit ipsum expedita voluptatum iste vero
+            cupiditate sed. voluptatum iste vero cupiditate sed. corrupti error
+            accusantium eaque laborum suscipit ipsum expedita voluptatum iste
+            vero cupiditate sed.
+          </p>
+
+          <details>
+            <summary>
+              <span class="summary-icon"
+                ><i class="bx bx-donate-blood"></i>
+              </span>
+              Ambition
+            </summary>
+            <div>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+              cupiditate? Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Natus, cupiditate? Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Natus, cupiditate?
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span class="summary-icon"
+                ><i class="bx bx-donate-blood"></i>
+              </span>
+              Vision
+            </summary>
+            <div>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+              cupiditate? Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Natus, cupiditate? Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Natus, cupiditate?
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              <span class="summary-icon"
+                ><i class="bx bx-donate-blood"></i>
+              </span>
+              Mission
+            </summary>
+            <div>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+              cupiditate?
+            </div>
+          </details>
+
+          <button class="btn">Read More</button>
+        </div>
+      </div>
+    </div>
+
+    <!--Projects Section-->
+
+    <div id="projects" class="projects">
+      <div class="project-content">
+        <div class="project-list">
+          <h3>
+            These Are Projects Available On My <br />
+            <span> <i class="bx bxl-github"></i> </span>GitHub
+          </h3>
+          <div class="list">
+            <ul>
+              <li>Project Tracking System</li>
+              <li>Web Based Chat Application</li>
+              <li>Feline Technology's Website</li>
+            </ul>
+          </div>
+          <a href="" class="view-more">Veiw More</a>
+        </div>
+        <div class="project-count">
+          <div class="project-card">
+            <div class="total">
+              <h4>Total Projects</h4>
+              <h2>21</h2>
+              <p>10 new projects</p>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="ongoing">
+              <h4>Ongoing</h4>
+              <h2>7</h2>
+              <p>33% of the total</p>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="completed">
+              <h4>Completed</h4>
+              <h2>5</h2>
+              <p>24% completion rate</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Contact Section-->
+
+    <div id="contact" class="contact">
+      <div class="contact-contents">
+        <div class="contact-info">
+          <h1>Reach Me Through the Following</h1>
+          <p>
+            Email:
+            <a href="mailto:yourname@example.com">yourname@example.com</a>
+          </p>
+          <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+          <p>Address: 123 Main Street, Your City, Country</p>
+        </div>
+
+        <div class="contact-form">
+          <form id="contactForm">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <p id="modal-message">Are you sure you want to submit this?</p>
+        <div class="modal-actions">
+          <button id="confirmYes">Yes</button>
+          <button id="confirmNo">No</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-about">
+          <h3>Derrick Nyenati</h3>
+          <p>
+            Full Stack Developer passionate about building modern and
+            user-friendly web applications.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-social">
+          <h4>Follow Me</h4>
+          <div class="social-icons">
+            <a href="#" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+            <a href="#" aria-label="LinkedIn"
+              ><i class="bx bxl-linkedin"></i
+            ></a>
+            <a href="#" aria-label="Twitter"><i class="bx bxl-twitter"></i></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="bx bxl-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Derrick Nyenati. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
