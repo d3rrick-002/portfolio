@@ -3,7 +3,7 @@
  * MAIN DOCUMENT READY FUNCTION
  * =============================================
  */
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   // Initialize all functionality
   initModal();
   initCardSelection();
@@ -24,25 +24,25 @@ function initModal() {
   const closeModalBtn = document.getElementsByClassName("close")[0];
 
   // Open modal on profile click
-  mobileModal.addEventListener("click", function() {
+  mobileModal.addEventListener("click", function () {
     modal.style.display = "block";
     document.body.classList.add("no-scroll");
   });
 
   // Open modal on profile hover (if needed)
-  openModalBtn.onmouseover = function() {
+  openModalBtn.onmouseover = function () {
     modal.style.display = "block";
     document.body.classList.add("no-scroll");
   };
 
   // Close modal when clicking X button
-  closeModalBtn.onclick = function() {
+  closeModalBtn.onclick = function () {
     modal.style.display = "none";
     document.body.classList.remove("no-scroll");
   };
 
   // Close modal when clicking outside
-  window.addEventListener("click", function(event) {
+  window.addEventListener("click", function (event) {
     if (event.target === modal) {
       modal.style.display = "none";
       document.body.classList.remove("no-scroll");
@@ -79,7 +79,7 @@ function initCardSelection() {
 
   // Add click event to each card
   cards.forEach((card) => {
-    card.addEventListener("click", function() {
+    card.addEventListener("click", function () {
       activateCard(this);
     });
   });
@@ -101,7 +101,7 @@ function initContactForm() {
 
   if (!form) return;
 
-  form.addEventListener("submit", function(e) {
+  form.addEventListener("submit", function (e) {
     e.preventDefault(); // Prevent actual form submission
     formSubmitted = true;
     modalMessage.textContent = "Are you sure you want to submit this?";
@@ -109,7 +109,7 @@ function initContactForm() {
     document.body.classList.add("no-scroll");
   });
 
-  confirmYes.addEventListener("click", function() {
+  confirmYes.addEventListener("click", function () {
     if (formSubmitted) {
       modalMessage.textContent = "Thanks for reaching out to us!";
       confirmYes.style.display = "none";
@@ -130,7 +130,7 @@ function initContactForm() {
     }
   });
 
-  confirmNo.addEventListener("click", function() {
+  confirmNo.addEventListener("click", function () {
     contactModal.style.display = "none";
     document.body.classList.remove("no-scroll");
     confirmYes.style.display = "inline-block";
@@ -138,7 +138,7 @@ function initContactForm() {
   });
 
   // Close modal when clicking outside
-  window.addEventListener("click", function(event) {
+  window.addEventListener("click", function (event) {
     if (event.target === contactModal) {
       contactModal.style.display = "none";
       document.body.classList.remove("no-scroll");
@@ -152,64 +152,67 @@ function initContactForm() {
  * =============================================
  */
 function initMobileNavigation() {
-  const hamburgerBtn = document.getElementById('hamburger-btn');
-  const mobileNav = document.getElementById('mobile-nav');
-  const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
+  const hamburgerBtn = document.getElementById("hamburger-btn");
+  const mobileNav = document.getElementById("mobile-nav");
+  const mobileNavOverlay = document.getElementById("mobile-nav-overlay");
 
   if (!hamburgerBtn || !mobileNav || !mobileNavOverlay) return;
 
-  hamburgerBtn.addEventListener('click', function() {
+  hamburgerBtn.addEventListener("click", function () {
     // Toggle mobile nav
-    mobileNav.classList.toggle('active');
+    mobileNav.classList.toggle("active");
     // Toggle overlay
-    mobileNavOverlay.classList.toggle('active');
+    mobileNavOverlay.classList.toggle("active");
     // Toggle body scroll
-    document.body.classList.toggle('no-scroll');
+    document.body.classList.toggle("no-scroll");
     // Toggle hamburger animation
-    this.classList.toggle('active');
+    this.classList.toggle("active");
   });
 
   // Close mobile menu when clicking on overlay
-  mobileNavOverlay.addEventListener('click', function() {
-    mobileNav.classList.remove('active');
-    this.classList.remove('active');
-    document.body.classList.remove('no-scroll');
-    hamburgerBtn.classList.remove('active');
+  mobileNavOverlay.addEventListener("click", function () {
+    mobileNav.classList.remove("active");
+    this.classList.remove("active");
+    document.body.classList.remove("no-scroll");
+    hamburgerBtn.classList.remove("active");
   });
 
   // Close mobile menu when clicking on nav links
-  const navLinks = document.querySelectorAll('.mobile-nav .nav-links a');
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      mobileNav.classList.remove('active');
-      mobileNavOverlay.classList.remove('active');
-      document.body.classList.remove('no-scroll');
-      hamburgerBtn.classList.remove('active');
+  const navLinks = document.querySelectorAll(".mobile-nav .nav-links a");
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileNav.classList.remove("active");
+      mobileNavOverlay.classList.remove("active");
+      document.body.classList.remove("no-scroll");
+      hamburgerBtn.classList.remove("active");
     });
   });
 }
 
 // Add this JavaScript to animate the progress bars when section is in view
-document.addEventListener('DOMContentLoaded', function() {
-  const skillsSection = document.querySelector('.skills-section');
-  const progressBars = document.querySelectorAll('.progress-bar');
-  
-  const animateProgressBars = () => {
-    progressBars.forEach(bar => {
-      const level = bar.getAttribute('data-level');
-      bar.style.width = level + '%';
-    });
-  };
-  
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        skillsSection.classList.add('in-view');
-        animateProgressBars();
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.2 });
-  
-  observer.observe(skillsSection);
-});
+// document.addEventListener("DOMContentLoaded", function () {
+//   const skillsSection = document.querySelector(".skills-section");
+//   const progressBars = document.querySelectorAll(".progress-bar");
+
+//   const animateProgressBars = () => {
+//     progressBars.forEach((bar) => {
+//       const level = bar.getAttribute("data-level");
+//       bar.style.width = level + "%";
+//     });
+//   };
+
+//   const observer = new IntersectionObserver(
+//     (entries) => {
+//       entries.forEach((entry) => {
+//         if (entry.isIntersecting) {
+//           skillsSection.classList.add("in-view");
+//           animateProgressBars();
+//           observer.unobserve(entry.target);
+//         }
+//       });
+//     },
+//     { threshold: 0.2 }
+//   );
+
+//   observer.observe(skillsSection);
+// });
