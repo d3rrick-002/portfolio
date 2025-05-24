@@ -190,26 +190,26 @@ function initMobileNavigation() {
 }
 
 // Add this JavaScript to animate the progress bars when section is in view
-document.addEventListener('DOMContentLoaded', function() {
-  const skillsSection = document.querySelector('.skills-section');
-  const progressBars = document.querySelectorAll('.progress-bar');
+// document.addEventListener('DOMContentLoaded', function() {
+//   const skillsSection = document.querySelector('.skills-section');
+//   const progressBars = document.querySelectorAll('.progress-bar');
   
-  const animateProgressBars = () => {
-    progressBars.forEach(bar => {
-      const level = bar.getAttribute('data-level');
-      bar.style.width = level + '%';
-    });
-  };
+//   const animateProgressBars = () => {
+//     progressBars.forEach(bar => {
+//       const level = bar.getAttribute('data-level');
+//       bar.style.width = level + '%';
+//     });
+//   };
   
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        skillsSection.classList.add('in-view');
-        animateProgressBars();
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.2 });
+//   const observer = new IntersectionObserver((entries) => {
+//     entries.forEach(entry => {
+//       if (entry.isIntersecting) {
+//         skillsSection.classList.add('in-view');
+//         animateProgressBars();
+//         observer.unobserve(entry.target);
+//       }
+//     });
+//   }, { threshold: 0.2 });
   
-  observer.observe(skillsSection);
-});
+//   observer.observe(skillsSection);
+// });
